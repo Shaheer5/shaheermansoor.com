@@ -63,7 +63,7 @@ module.exports = withContentlayer(
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
-    basePath: '/shaheermansoor.com', // Add basePath configuration here
+    // basePath: '/shaheermansoor.com',
     images: {
       remotePatterns: [
         {
@@ -88,5 +88,12 @@ module.exports = withContentlayer(
 
       return config
     },
+    exportPathMap: function () {
+      return {
+        '/': { page: '/' }, // Adjust this according to your project structure
+      }
+    },
+    assetPrefix: '/shaheermansoor.com/', // Add your custom domain here
+    basePath: '/shaheermansoor.com', // Add basePath configuration here
   })
 )
