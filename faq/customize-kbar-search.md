@@ -1,3 +1,5 @@
+// faq/customize-kbar-search.md
+
 # How can I customize the `kbar` search?
 
 Add a `SearchProvider` component such as the one shown below and use it in place of the default `SearchProvider` component in `app/layout.tsx`.
