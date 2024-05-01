@@ -63,7 +63,7 @@ module.exports = withContentlayer(
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
-    basePath: '/shaheermansoor', // Add basePath configuration here
+    basePath: '/shaheermansoor.com', // Add basePath configuration here
     images: {
       remotePatterns: [
         {
