@@ -1,4 +1,5 @@
 const { withContentlayer } = require('next-contentlayer2')
+
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
@@ -6,13 +7,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app disqus.com analytics.umami.is;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
   connect-src *;
   font-src 'self';
-  frame-src giscus.app disqus.com;
+  frame-src giscus.app
 `
 
 const securityHeaders = [
@@ -56,16 +57,15 @@ const securityHeaders = [
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
-module.exports = withContentlayer(
-  withBundleAnalyzer({
+module.exports = () => {
+  const plugins = [withContentlayer, withBundleAnalyzer]
+  return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
-    // basePath: '/shaheermansoor.com',
     images: {
-      unoptimized: true,
       remotePatterns: [
         {
           protocol: 'https',
@@ -73,14 +73,14 @@ module.exports = withContentlayer(
         },
       ],
     },
-    // async headers() {
-    //   return [
-    //     {
-    //       source: '/(.*)',
-    //       headers: securityHeaders,
-    //     },
-    //   ]
-    // },
+    async headers() {
+      return [
+        {
+          source: '/(.*)',
+          headers: securityHeaders,
+        },
+      ]
+    },
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
@@ -89,14 +89,5 @@ module.exports = withContentlayer(
 
       return config
     },
-    generateStaticParams: async () => {
-      return {
-        '/': { page: '/' }, // Adjust this according to your project structure
-      }
-    },
-    assetPrefix: '/shaheermansoor.com/', // Add your custom domain here
-    basePath: '/shaheermansoor.com', // Add basePath configuration here
-    output: 'export',
-    distDir: 'dist',
   })
-)
+}
