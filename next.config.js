@@ -65,7 +65,7 @@ module.exports = withContentlayer(
     },
     // basePath: '/shaheermansoor.com',
     images: {
-      // unoptimized: true,
+      unoptimized: true,
       remotePatterns: [
         {
           protocol: 'https',
@@ -89,12 +89,14 @@ module.exports = withContentlayer(
 
       return config
     },
-    exportPathMap: function () {
+    generateStaticParams: async () => {
       return {
         '/': { page: '/' }, // Adjust this according to your project structure
       }
     },
     assetPrefix: '/shaheermansoor.com/', // Add your custom domain here
     basePath: '/shaheermansoor.com', // Add basePath configuration here
+    output: 'export',
+    distDir: 'dist',
   })
 )
