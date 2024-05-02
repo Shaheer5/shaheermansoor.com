@@ -52,6 +52,11 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
+  {
+    key: 'Content-Security-Policy',
+    value:
+      "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' c.disquscdn.com shaheermansoor.disqus.com; style-src 'self' 'unsafe-inline' c.disquscdn.com shaheermansoor.disqus.com; frame-src 'self' disqus.com shaheermansoor.disqus.com;",
+  },
 ]
 
 /**
