@@ -74,7 +74,7 @@ const ThemeSwitch = () => {
                   <Menu.Item>
                     <button
                       className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-                      name="sun"
+                      aria-label="sun"
                     >
                       <div className="mr-2">
                         <Sun />
@@ -87,7 +87,7 @@ const ThemeSwitch = () => {
                   <Menu.Item>
                     <button
                       className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-                      name="moon"
+                      aria-label="moon"
                     >
                       <div className="mr-2">
                         <Moon />
@@ -100,7 +100,7 @@ const ThemeSwitch = () => {
                   <Menu.Item>
                     <button
                       className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-                      name="system"
+                      aria-label="system"
                     >
                       <div className="mr-2">
                         <Monitor />
