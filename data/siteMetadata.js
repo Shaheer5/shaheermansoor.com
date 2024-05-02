@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
+  author: 'Shaheer Mansoor',
+  headerTitle: 'Shaheer Mansoor',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
@@ -11,15 +11,15 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
+  email: 'shaheermansoor321@gmail.com',
+  github: 'https://github.com/Shaheer5',
+  x: 'https://twitter.com/ShaheerMansoor2',
   // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
+  facebook: 'https://www.facebook.com/shaheer.mansoor.35',
+  // youtube: 'https://youtube.com',
+  linkedin: 'https://www.linkedin.com/in/shaheer-mansoor-2092631a6/',
+  // threads: 'https://www.threads.net',
+  instagram: 'https://www.instagram.com/shaheer_shamin/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
