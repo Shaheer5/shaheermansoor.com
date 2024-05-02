@@ -49,3 +49,10 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Custom styles */
+
+::selection {
+  background: #dd2777;
+  color: white;
+}
