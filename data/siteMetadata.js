@@ -1,9 +1,10 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
+  title: 'Shaheer Mansoor',
   author: 'Shaheer Mansoor',
   headerTitle: 'Shaheer Mansoor',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description:
+    'I am a full stack software engineer who loves writing code, building things and solving problems :)',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
