@@ -1,0 +1,6 @@
+/* Custom styles */
+
+::selection {
+  background: #dd2777;
+  color: white;
+}
