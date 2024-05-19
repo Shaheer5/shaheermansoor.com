@@ -20,7 +20,7 @@ const siteMetadata = {
   // youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/shaheer-mansoor-2092631a6/',
   // threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com/shaheer_shamin/',
+  instagram: 'https://www.instagram.com/shaheer.mansoor/',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
