@@ -12,6 +12,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+import Marquee from 'react-fast-marquee'
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -78,6 +79,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#030712" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
+        <Marquee
+          pauseOnHover
+          autoFill
+          className="left-0 top-0 z-50 w-full bg-[#38c6dc] py-1"
+          style={{
+            position: 'absolute',
+          }}
+        >
+          #Free_Palestine 🖤💚❤️🤍
+        </Marquee>
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>

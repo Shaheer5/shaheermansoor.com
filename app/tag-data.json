@@ -1,16 +1,16 @@
 {
-  "fasting": 1,
-  "islamic": 1,
-  "guide": 5,
   "next-js": 4,
-  "tailwind": 2,
-  "feature": 1,
-  "hello": 1,
   "math": 1,
   "ols": 1,
-  "life-style": 1,
   "github": 1,
+  "guide": 4,
+  "hello": 1,
+  "tailwind": 2,
+  "feature": 1,
   "writings": 1,
   "book": 1,
-  "reflection": 1
+  "reflection": 1,
+  "fasting": 1,
+  "islamic": 1,
+  "life-style": 1
 }
