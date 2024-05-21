@@ -82,9 +82,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Marquee
           pauseOnHover
           autoFill
-          className="left-0 top-0 z-50 w-full bg-[#38c6dc] py-1"
+          className="left-0 top-0 z-50 w-full bg-[#019138] py-1"
           style={{
-            position: 'absolute',
+            position: 'fixed',
           }}
         >
           #Free_Palestine 🖤💚❤️🤍
@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex h-screen flex-col justify-between font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <Header />
-                <main className="mb-auto">{children}</main>
+                <main className="mb-auto mt-24">{children}</main>
               </SearchProvider>
               <Footer />
             </div>

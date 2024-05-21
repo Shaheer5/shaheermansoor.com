@@ -20,8 +20,12 @@ const MobileNav = () => {
   }
 
   return (
-    <>
-      <button aria-label="Toggle Menu" onClick={onToggleNav} className="sm:hidden">
+    <div className="sm:hidden">
+      <button
+        aria-label="Toggle Menu"
+        onClick={onToggleNav}
+        className="ml-1 mr-1 h-8 w-8 rounded py-1"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -36,9 +40,8 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`max-w-screen } fixed left-0 top-0 z-20 ml-0 h-full w-[103%] transform bg-gray-100 bg-opacity-60 backdrop-blur-sm
-        duration-300 ease-in-out dark:bg-gray-950 dark:bg-opacity-[0.30] dark:backdrop-blur-md ${
-          navShow ? 'translate-x-[-5%]' : 'translate-x-full'
+        className={`fixed left-0 top-0 z-20 ml-0 h-screen w-full transform  bg-white bg-opacity-90  duration-300 ease-in-out dark:bg-gray-950 dark:bg-opacity-[0.90] sm:hidden ${
+          navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex justify-end">
@@ -71,7 +74,7 @@ const MobileNav = () => {
           ))}
         </nav>
       </div>
-    </>
+    </div>
   )
 }
 
