@@ -1,0 +1,199 @@
+---
+title: 'Next.js 15 Release Candidate: New Features and Enhancements'
+date: '2024-5-24'
+lastmod: '2024-5-24'
+tags: ['next-js', 'guide', 'feature']
+draft: false
+summary: 'The Next.js 15 Release Candidate (RC) is now available, offering a chance to explore the latest features before the stable release.'
+images:
+  [
+    '/static/images/blog-images/hydration-error-before-dark.avif',
+    '/static/images/blog-images/hydration-error-after-dark.avif',
+    '/static/images/blog-images/create-next-app-dark.avif',
+  ]
+authors: ['default']
+---
+
+# Next.js 15 Release Candidate: New Features and Enhancements
+
+<TOCInline
+  toc={props.toc}
+  asDisclosure
+  exclude={'Next.js 15 Release Candidate: New Features and Enhancements'}
+/>
+
+## Key Highlights
+
+Next.js 15 RC includes support for React 19 RC, bringing new client and server features, such as Actions. Note that some third-party libraries may not yet be compatible with React 19.
+
+### React Compiler (Experimental)
+
+The new experimental React Compiler, developed by Meta, optimizes code by understanding JavaScript semantics and React rules. This reduces the need for manual memoization with hooks like `useMemo` and `useCallback`, simplifying code maintenance. To enable the compiler, install `babel-plugin-react-compiler` and update your `next.config.js`:
+
+Install **babel-plugin-react-compiler**:
+
+```ts:>_terminal
+npm install babel-plugin-react-compiler
+```
+
+Then, add **experimental.reactCompiler** option in **next.config.js**:
+
+```ts:next.config.js
+const nextConfig = {
+  experimental: {
+    reactCompiler: true,
+  },
+};
+module.exports = nextConfig;
+```
+
+Optionally, you can configure the compiler to run in "opt-in" mode as follows:
+
+```ts:next.config.js
+const nextConfig = {
+  experimental: {
+    reactCompiler: {
+      compilationMode: 'annotation',
+    },
+  },
+};
+
+module.exports = nextConfig;
+```
+
+### Hydration Error Improvements
+
+Next.js 15 enhances hydration error messages by displaying the source code of errors and providing suggestions for fixes, building on [improvements](https://nextjs.org/blog/next-14-1#improved-error-messages-and-fast-refresh) from version 14.1.
+
+Example -> this was a previous hydration error message in Next.js 14.1:
+
+![Hydration error before](/static/images/blog-images/hydration-error-before-dark.avif)
+
+Next.js 15 RC has improved this to:
+![Hydration error after](/static/images/blog-images/hydration-error-after-dark.avif)
+
+### Caching Updates
+
+Caching defaults have been revised:
+
+`fetch` **Requests are no longer cached by default**:
+
+Next.js uses the [Web fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) cache option to configure how a server-side fetch request interacts with the framework's persistent HTTP cache:
+
+```ts:
+fetch('https://...', { cache: 'force-cache' | 'no-store' });
+```
+
+- **no-store** - fetch a resource from a remote server on every request and do not update the cache
+- **force-cache** - fetch a resource from the cache (if it exists) or a remote server and update the cache
+
+In Next.js 14, **force-cache** was used by default if a cache option was not provided, unless a dynamic function or dynamic config option was used.
+
+In Next.js 15,
+
+- **fetch Requests:** Now default to no-store, meaning no caching unless explicitly specified.
+- **GET Route Handlers:** Also default to no caching.
+- **Client Router Cache:** No longer caches Page components by default, but you can opt-in for previous behavior using the staleTimes configuration.
+
+### Partial Prerendering (Experimental)
+
+Partial Prerendering (PPR) allows combining static and dynamic rendering on the same page. Opt into PPR incrementally by setting the **experimental_ppr** config in specific layouts or pages:
+
+Next.js currently defaults to static rendering unless you use dynamic functions such as cookies(), headers(), and uncached data requests. These APIs opt an entire route into dynamic rendering. With PPR, you can wrap any dynamic UI in a Suspense boundary. When a new request comes in, Next.js will immediately serve a static HTML shell, then render and stream the dynamic parts in the same HTTP request.
+
+```ts:app/page.jsx
+import { Suspense } from "react"
+import { StaticComponent, DynamicComponent } from "@/app/ui"
+
+export const experimental_ppr = true
+
+export default function Page() {
+  return {
+     <>
+	     <StaticComponent />
+	     <Suspense fallback={...}>
+		     <DynamicComponent />
+	     </Suspense>
+     </>
+  };
+}
+```
+
+Enable it in `next.config.js`:
+
+```ts:next.config.js
+const nextConfig = {
+  experimental: {
+    ppr: 'incremental',
+  },
+};
+module.exports = nextConfig;
+```
+
+### next/after (Experimental)
+
+The new `after` API allows scheduling tasks to run after a response has finished streaming, ideal for non-essential tasks like logging or analytics, in order for secondary tasks to run without blocking primary response:
+
+```ts:
+import { unstable_after as after } from 'next/server';
+import { log } from '@/app/utils';
+
+export default function Layout({ children }) {
+  // Secondary task
+  after(() => {
+    log();
+  });
+
+  // Primary task
+  return <>{children}</>;
+}
+```
+
+Enable it in `next.config.js`:
+
+```ts:next.config.js
+const nextConfig = {
+  experimental: {
+    after: true,
+  },
+};
+
+module.exports = nextConfig;
+```
+
+### create-next-app Enhancements
+
+The `create-next-app tool` features a new design and a prompt to enable Turbopack for local development. Use the `--turbo` flag for Turbopack and the `--empty` flag for a minimal setup.
+
+```ts:bash
+npx create-next-app@rc --turbo
+npx create-next-app@rc --empty
+```
+
+For Next.js 15, Vercel has also updated create-next-app with a new design.
+![Create Next App Redesign](/static/images/blog-images/create-next-app-dark.avif)
+
+### Bundling & Optimizing External Packages (Stable)
+
+External packages are now bundled by default in the App Router. Use the new `bundlePagesRouterDependencies` option for the Pages Router and opt-out specific packages with `serverExternalPackages`:
+
+```ts:next.config.js
+const nextConfig = {
+  // Automatically bundle external packages in the Pages Router:
+  bundlePagesRouterDependencies: true,
+  // Opt specific packages out of bundling for both App and Pages Router:
+  serverExternalPackages: ['package-name'],
+};
+
+module.exports = nextConfig;
+```
+
+## Breaking Changes and Improvements
+
+- Minimum React version is now 19 RC.
+- Removed `squoosh` in favor of `sharp` for `next/image`.
+- Enhanced sitemap URL alignment and environmental variable fallbacks.
+- Various configuration options and defaults have been updated for better performance and compatibility.
+- For more details and other minor changes, refer to the [Next.js 15 upgrade guide](https://nextjs.org/blog/next-15-rc).
+
+Thanks you so much for reading {'<3'}
