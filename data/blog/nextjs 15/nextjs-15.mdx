@@ -190,10 +190,29 @@ module.exports = nextConfig;
 
 ## Breaking Changes and Improvements
 
+**Breaking:**
+
 - Minimum React version is now 19 RC.
 - Removed `squoosh` in favor of `sharp` for `next/image`.
-- Enhanced sitemap URL alignment and environmental variable fallbacks.
-- Various configuration options and defaults have been updated for better performance and compatibility.
-- For more details and other minor changes, refer to the [Next.js 15 upgrade guide](https://nextjs.org/blog/next-15-rc).
+- next/image: Changed default `Content-Disposition` to `attachment`.
+- next/image: Error when `src` has leading or trailing spaces.
+- Middleware: Apply `react-server` condition to limit unrecommended react API imports.
+- next/font: Removed support for external `@next/font` package.
+- next/font: Removed `font-family` hashing.
+- Caching: `force-dynamic` will now set a `no-store` default to the fetch cache.
+- Config: Enable `swcMinify` (PR), `missingSuspenseWithCSRBailout` (PR), and `outputFileTracing` (PR) behavior by default and remove deprecated options.
+- Remove auto-instrumentation for Speed Insights (must now use the dedicated @vercel/speed-insights package).
+
+**Improvements:**
+
+- Align sitemap URLs in development and production.
+- Metadata: Updated environmental variable fallbacks for `metadataBase` when hosted on Vercel.
+- Fix tree-shaking with mixed namespace and named imports from `optimizePackageImports`.
+- Parallel Routes: Provide unmatched catch-all routes with all known params.
+- Config `bundlePagesExternals` is now stable and renamed to `bundlePagesRouterDependencies`.
+- Config `serverComponentsExternalPackages` is now stable and renamed to `serverExternalPackages`.
+- create-next-app: New projects ignore all `.env` files by default.
+- For more details and other minor changes, refer to the [Next.js 15 Vercel Article](https://nextjs.org/blog/next-15-rc).
+- Upgrade Guide [How to upgrade to Next 15](https://rc.nextjs.org/docs/app/building-your-application/upgrading)
 
 Thanks you so much for reading {'<3'}
