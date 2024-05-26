@@ -26,7 +26,7 @@ authors: ['default']
 
 Next.js 15 RC includes support for React 19 RC, bringing new client and server features, such as Actions. Note that some third-party libraries may not yet be compatible with React 19.
 
-### React Compiler (Experimental)
+## React Compiler (Experimental)
 
 The new experimental React Compiler, developed by Meta, optimizes code by understanding JavaScript semantics and React rules. This reduces the need for manual memoization with hooks like `useMemo` and `useCallback`, simplifying code maintenance. To enable the compiler, install `babel-plugin-react-compiler` and update your `next.config.js`:
 
@@ -61,7 +61,7 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-### Hydration Error Improvements
+## Hydration Error Improvements
 
 Next.js 15 enhances hydration error messages by displaying the source code of errors and providing suggestions for fixes, building on [improvements](https://nextjs.org/blog/next-14-1#improved-error-messages-and-fast-refresh) from version 14.1.
 
@@ -72,7 +72,7 @@ Example -> this was a previous hydration error message in Next.js 14.1:
 Next.js 15 RC has improved this to:
 ![Hydration error after](/static/images/blog-images/hydration-error-after-dark.avif)
 
-### Caching Updates
+## Caching Updates
 
 Caching defaults have been revised:
 
@@ -95,7 +95,7 @@ In Next.js 15,
 - **GET Route Handlers:** Also default to no caching.
 - **Client Router Cache:** No longer caches Page components by default, but you can opt-in for previous behavior using the staleTimes configuration.
 
-### Partial Prerendering (Experimental)
+## Partial Prerendering (Experimental)
 
 Partial Prerendering (PPR) allows combining static and dynamic rendering on the same page. Opt into PPR incrementally by setting the **experimental_ppr** config in specific layouts or pages:
 
@@ -130,7 +130,7 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-### next/after (Experimental)
+## next/after (Experimental)
 
 The new `after` API allows scheduling tasks to run after a response has finished streaming, ideal for non-essential tasks like logging or analytics, in order for secondary tasks to run without blocking primary response:
 
@@ -161,7 +161,7 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-### create-next-app Enhancements
+## create-next-app Enhancements
 
 The `create-next-app tool` features a new design and a prompt to enable Turbopack for local development. Use the `--turbo` flag for Turbopack and the `--empty` flag for a minimal setup.
 
@@ -173,7 +173,7 @@ npx create-next-app@rc --empty
 For Next.js 15, Vercel has also updated create-next-app with a new design.
 ![Create Next App Redesign](/static/images/blog-images/create-next-app-dark.avif)
 
-### Bundling & Optimizing External Packages (Stable)
+## Bundling & Optimizing External Packages (Stable)
 
 External packages are now bundled by default in the App Router. Use the new `bundlePagesRouterDependencies` option for the Pages Router and opt-out specific packages with `serverExternalPackages`:
 
