@@ -1,8 +1,9 @@
 {
+  "next-js": 6,
+  "guide": 7,
+  "react": 1,
   "angular": 1,
-  "guide": 6,
   "feature": 3,
-  "next-js": 5,
   "fasting": 1,
   "islamic": 1,
   "life-style": 1,
