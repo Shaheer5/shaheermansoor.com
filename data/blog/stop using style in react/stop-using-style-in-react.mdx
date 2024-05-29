@@ -1,0 +1,91 @@
+---
+title: "STOP using 'style' attribute in React. Use these practices"
+date: '2024-5-29'
+lastmod: '2024-5-29'
+tags: ['next-js', 'guide', 'react']
+draft: false
+summary: 'Using inline styles in React may seem convenient at first, but they come with their fair share of limitations.'
+images:
+  [
+    '/static/images/blog-images/inline-fold-icon.png',
+    '/static/images/blog-images/inline-fold-explaination.png',
+  ]
+authors: ['default']
+---
+
+## Introduction:
+
+<TOCInline toc={props.toc} asDisclosure exclude={'Introduction:'} />
+
+Are you tired of the limitations of inline styles in React? Let's explore the best alternatives and level up your styling game for more efficient and maintainable components!
+
+### Drawbacks of Inline Styles
+
+Using inline styles in React may seem convenient at first, but they come with their fair share of limitations. These styles lack the full spectrum of CSS features, leading to bloated and unmanageable components.
+
+### Why Plain Old CSS is still better?
+
+The shift towards using plain old CSS for styling in React offers a multitude of advantages. With no additional learning needed, it provides access to common knowledge and ensures long-term reliability.
+
+### Maximize Usage of CSS Modules
+
+CSS modules offer a powerful solution to keeping styles in sync with components by defining styles inside the module CSS file. Importing classes by name and applying them to your component reduces the need for manual checks, ensuring style accuracy.
+
+### Using Styled Components
+
+Styled components allow writing CSS in JavaScript, enabling the utilization of CSS features like media queries and nesting. They prove essential for conditionally applying styles and maintaining a consistent design system.
+
+### Hate it or Love it ft. Tailwind CSS
+
+Tailwind CSS, a customizable UI tool gaining popularity, offers predefined classes for easy styling in components. While the learning curve may be steep initially, the benefits of Tailwind are undeniable and worth exploring.
+
+One could argue that both inline CSS and tailwind CSS bloats HTML. Well you are right but tailwind does not bloats HTML code to much like:
+
+```html:inline-css
+  <div
+    style={{
+      backgroundColor: "#F00",
+      textColor: "white",
+      fontWeight: "bold",
+      padding: "2px 4px",
+      border: "2px solid red",
+      borderRadius: "24px"}}
+  >
+    Hi Mom!
+  </div>
+```
+
+**VS**
+
+```html:tailwind-css
+  <div class="bg-red-500 text-white font-bold py-2 px-4 rounded">
+    Hi Mom!
+  </div>
+```
+
+**WELL YOU CAN SEE👀 TAILWIND BLOATS LESS XD**
+
+Here is the component library of Tailwind CSS
+
+[tailwind-component-library](https://tailwindui.com/?ref=top)
+![tailwind-component-library](/static/images/blog-images/tailwind-component-library.png)
+
+### Superior Developer Experience with Alternatives
+
+Ditching inline styles in favor of the alternative styling methods not only saves time but also enhances the overall developer experience. Resources like the [bootstrap](https://getbootstrap.com/) or [tailwindcss](https://tailwindcss.com/) frontend kit provide a plethora of colors, fonts, and icons for seamless styling.
+
+### Conclusion:
+
+By transitioning away from inline styles and embracing the diverse range of styling methods available for React, developers can significantly improve the efficiency, maintainability, and developer experience of their components. It's time to bid farewell to the limitations and welcome the liberation of dynamic and versatile styling.
+
+### Bonus Tip:
+
+There is an extension called Inline Fold for VSCode, that hide classes that bloat your HTML code, when you hover on className it will show them.
+
+![inline-fold-icon](/static/images/blog-images/inline-fold-icon.png)
+
+Here is an example:
+
+![inline-fold-explaination](/static/images/blog-images/inline-fold-explaination.png)
+
+Thanks you so much for reading {'<3'}
