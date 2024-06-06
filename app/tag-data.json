@@ -1,18 +1,18 @@
 {
   "next-js": 6,
-  "guide": 7,
-  "react": 1,
-  "angular": 1,
-  "feature": 3,
-  "fasting": 1,
-  "islamic": 1,
-  "life-style": 1,
-  "tailwind": 2,
-  "hello": 1,
   "math": 1,
   "ols": 1,
   "github": 1,
+  "guide": 7,
+  "hello": 1,
+  "tailwind": 2,
+  "feature": 3,
   "writings": 1,
   "book": 1,
-  "reflection": 1
+  "reflection": 1,
+  "angular": 1,
+  "fasting": 1,
+  "islamic": 1,
+  "life-style": 1,
+  "react": 1
 }
