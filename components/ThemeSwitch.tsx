@@ -56,7 +56,11 @@ const ThemeSwitch = () => {
     <div className="mr-5">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button>{resolvedTheme === 'dark' ? <Moon /> : <Sun />}</Menu.Button>
+          <Menu.Button
+            aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {resolvedTheme === 'dark' ? <Moon /> : <Sun />}
+          </Menu.Button>
         </div>
         <Transition
           as={Fragment}
@@ -74,7 +78,7 @@ const ThemeSwitch = () => {
                   <Menu.Item>
                     <button
                       className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-                      aria-label="sun"
+                      aria-label="Switch to light theme"
                     >
                       <div className="mr-2">
                         <Sun />
@@ -87,7 +91,7 @@ const ThemeSwitch = () => {
                   <Menu.Item>
                     <button
                       className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-                      aria-label="moon"
+                      aria-label="Switch to dark theme"
                     >
                       <div className="mr-2">
                         <Moon />
@@ -100,7 +104,7 @@ const ThemeSwitch = () => {
                   <Menu.Item>
                     <button
                       className="group flex w-full items-center rounded-md px-2 py-2 text-sm"
-                      aria-label="system"
+                      aria-label="Switch to system theme"
                     >
                       <div className="mr-2">
                         <Monitor />
