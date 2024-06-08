@@ -73,7 +73,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png" />
       <link rel="manifest" href="/static/favicons/site.webmanifest" />
-      <link rel="manifest" href="/static/favicons/manifest.webmanifest" />
       <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="google-site-verification" content="NBhNb7BoeGUkJQ8ATfRMh44H5qXkV2eZMgaUGtMl2Rk" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#030712" />
