@@ -1,6 +1,6 @@
 {
   "theme_color": "#22c1dc",
-  "background_color": "#030712",
+  "background_color": "#05102e",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
@@ -39,6 +39,34 @@
       "src": "/static/favicons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/static/favicons/screenshot-desktop-1.webp",
+      "sizes": "640x320",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Shaheer Mansoor About"
+    },
+    {
+      "src": "/static/favicons/screenshot-desktop-2.webp",
+      "sizes": "640x320",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Shaheer Mansoor"
+    },
+    {
+      "src": "/static/favicons/screenshot-mobile-1.webp",
+      "sizes": "320x640",
+      "type": "image/webp",
+      "label": "Shaheer Mansoor"
+    },
+    {
+      "src": "/static/favicons/screenshot-mobile-2.webp",
+      "sizes": "320x640",
+      "type": "image/webp",
+      "label": "Shaheer Mansoor"
     }
   ]
 }
