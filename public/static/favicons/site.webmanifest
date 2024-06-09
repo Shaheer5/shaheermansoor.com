@@ -68,5 +68,35 @@
       "type": "image/webp",
       "label": "Shaheer Mansoor"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Latest Blogs by Shaheer Mansoor",
+      "short_name": "Latest",
+      "description": "Go to blog page",
+      "url": "/",
+      "icons": [{ "src": "/static/favicons/star-icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Blog Tags in whole Website",
+      "short_name": "Tags",
+      "description": "See all Blog Tags",
+      "url": "/tags",
+      "icons": [{ "src": "/static/favicons/tag-icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Projects done by Shaheer Mansoor",
+      "short_name": "Projects",
+      "description": "Go to Project Page",
+      "url": "/projects",
+      "icons": [{ "src": "/static/favicons/project-icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Learn More about Shaheer Mansoor",
+      "short_name": "About",
+      "description": "Go to About Page",
+      "url": "/about",
+      "icons": [{ "src": "/static/favicons/user-icon.svg", "sizes": "192x192" }]
+    }
   ]
 }
