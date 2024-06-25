@@ -3,14 +3,17 @@
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import OpenToWorkBadge from './ui/OpenToWorkBadge'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const [bubbleShow, setBubbleShow] = useState(true)
 
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
         document.body.style.overflow = 'auto'
+        setBubbleShow(false)
       } else {
         // Prevent scrolling
         document.body.style.overflow = 'hidden'
@@ -20,12 +23,16 @@ const MobileNav = () => {
   }
 
   return (
-    <div className="sm:hidden">
-      <button
-        aria-label="Toggle Menu"
-        onClick={onToggleNav}
-        className="ml-1 mr-1 h-8 w-8 rounded py-1"
-      >
+    <div className="relative sm:hidden">
+      {bubbleShow && (
+        <div
+          className="absolute -top-1 right-0 flex aspect-square h-[14px] w-[14px] animate-pulse rounded-full bg-green-500/50 dark:bg-green-400/50"
+          aria-hidden="true"
+        >
+          <div className="m-auto h-2 w-2 rounded-full bg-green-500 dark:bg-green-400"></div>
+        </div>
+      )}
+      <button aria-label="Toggle Menu" onClick={onToggleNav} className="ml-1 mr-1 h-8 w-8 rounded">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -72,6 +79,7 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
+          <OpenToWorkBadge classes={'ml-12 mt-4'} />
         </nav>
       </div>
     </div>

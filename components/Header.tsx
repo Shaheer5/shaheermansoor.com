@@ -5,10 +5,11 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import OpenToWorkBadge from './ui/OpenToWorkBadge'
 
 const Header = () => {
   return (
-    <header className="supports-backdrop-blur dark:bg-dark/75 fixed left-0 right-0 top-8 z-40  bg-white/60 px-3 py-4 backdrop-blur dark:bg-[#030712]/20 xl:px-0">
+    <header className="supports-backdrop-blur dark:bg-dark/75 fixed left-0 right-0 top-8 z-40  bg-white/60 px-3 pb-4 pt-4 backdrop-blur dark:bg-[#030712]/20 sm:pb-10 xl:px-0">
       <div className="mx-auto flex max-w-4xl items-center justify-between px-3 xl:max-w-5xl xl:px-0">
         <div>
           <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -26,6 +27,9 @@ const Header = () => {
             </div>
           </Link>
         </div>
+        {siteMetadata.openToWork && (
+          <OpenToWorkBadge classes={'absolute hidden sm:inline-block mt-20'} />
+        )}
         <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
           {headerNavLinks
             .filter((link) => link.href !== '/')
