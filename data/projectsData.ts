@@ -25,8 +25,14 @@ const projectsData: Project[] = [
   {
     title: 'ThreeJS Customizable Shirt',
     description: `Create your unique and exclusive shirt with our brand new 3D customization tool. Convert Imagination to Reality and define your own style.`,
-    imgSrc: '/static/images/threejs-shirt-live.png',
+    imgSrc: '/static/images/projects/threejs-shirt-live.png',
     href: '/blog/threejs-shirt',
+  },
+  {
+    title: 'Apple Website Clone - iPhone 15 Pro',
+    description: `1:1 Apple iPhone 15 Pro Webpage clone, powered by Three.JS, GSAP for smooth animations and all the design saved by Tailwind CSS...`,
+    imgSrc: '/static/images/projects/apple-website-iphone15-live.png',
+    href: '/blog/apple-iphone15-clone/apple-iphone15-clone',
   },
 ]
 
