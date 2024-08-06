@@ -23,6 +23,12 @@ const projectsData: Project[] = [
   //   href: '/blog/the-time-machine',
   // },
   {
+    title: 'Horizon Banking App - With Finance Management',
+    description: `Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users...`,
+    imgSrc: '/static/images/projects/horizon-banking-homepage.png',
+    href: '/blog/horizon-banking',
+  },
+  {
     title: 'ThreeJS Customizable Shirt',
     description: `Create your unique and exclusive shirt with our brand new 3D customization tool. Convert Imagination to Reality and define your own style.`,
     imgSrc: '/static/images/projects/threejs-shirt-live.png',

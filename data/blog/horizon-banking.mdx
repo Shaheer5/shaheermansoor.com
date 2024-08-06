@@ -1,0 +1,130 @@
+---
+title: 'Horizon Banking - With Finance Management'
+date: '2024-08-06'
+tags: ['Next-JS', 'Projects', 'TypeScript']
+draft: false
+summary: Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users...
+---
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+# ThreeJS Customizable Shirt by Shaheer Mansoor
+
+_Title_: Horizon Banking - With Finance Management
+
+_Author_: Shaheer Mansoor
+
+_Subject_: Banking App/Finance
+
+_Language_: English
+
+_Live Preview_: [Visit Live Website](https://sm-banking.vercel.app//)
+
+_Source Code_: [Github Repository](https://github.com/Shaheer5/threejs-shirt)
+
+## Introduction
+
+A banking🏦 app with finance 💰 management.
+
+Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users, and manages their finances altogether.
+
+## ⚙️ Tech Stack
+
+- Next.js: A React framework for building server-side rendered and static web applications with built-in routing and performance optimizations.
+- TypeScript: A statically typed superset of JavaScript that adds type safety and enhanced development tools.
+- Appwrite: An open-source backend-as-a-service platform for building secure, scalable web and mobile applications.
+- Plaid: A financial technology service that provides access to users' bank account data and financial transactions.
+- Dwolla: A payment platform that enables ACH (Automated Clearing House) payments and money transfers in the U.S.
+- React Hook Form: A library for managing form state and validation in React applications using hooks.
+- Zod: A TypeScript-first schema validation library for validating and parsing data with a focus on TypeScript integration.
+- TailwindCSS: A utility-first CSS framework that allows for rapid design and customization of UI elements.
+- Chart.js: A JavaScript library for creating interactive and customizable charts and visualizations.
+- ShadCN: A library for building accessible and customizable UI components, integrating with TailwindCSS for styling.
+
+## 🔋 Features
+
+👉 Authentication: An ultra-secure SSR authentication with proper validations and authorization
+
+👉 Connect Banks: Integrates with Plaid for multiple bank account linking
+
+👉 Home Page: Shows general overview of user account with total balance from all connected banks, recent transactions, money spent on different categories, etc
+
+👉 My Banks: Check the complete list of all connected banks with respective balances, account details
+
+👉 Transaction History: Includes pagination and filtering options for viewing transaction history of different banks
+
+👉 Real-time Updates: Reflects changes across all relevant pages upon connecting new bank accounts.
+
+👉 Funds Transfer: Allows users to transfer funds using Dwolla to other accounts with required fields and recipient bank ID.
+
+👉 Responsiveness: Ensures the application adapts seamlessly to various screen sizes and devices, providing a consistent user experience across desktop, tablet, and mobile platforms.
+
+and many more, including code architecture and reusability.
+
+## 🤸 Quick Start
+
+Follow these steps to set up the project locally on your machine.
+
+Prerequisites
+
+Make sure you have the following installed on your machine:
+
+Git
+Node.js
+npm (Node Package Manager)
+Cloning the Repository
+
+```ts:bash
+git clone https://github.com/adrianhajdin/banking.git
+cd banking
+```
+
+Installation
+
+Install the project dependencies using npm:
+
+```ts:shell
+npm install
+```
+
+Set Up Environment Variables
+
+Create a new file named .env in the root of your project and add the following content:
+
+```ts:.env
+#NEXT
+NEXT_PUBLIC_SITE_URL=
+
+#APPWRITE
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=
+APPWRITE_DATABASE_ID=
+APPWRITE_USER_COLLECTION_ID=
+APPWRITE_BANK_COLLECTION_ID=
+APPWRITE_TRANSACTION_COLLECTION_ID=
+APPWRITE_SECRET=
+
+#PLAID
+PLAID_CLIENT_ID=
+PLAID_SECRET=
+PLAID_ENV=
+PLAID_PRODUCTS=
+PLAID_COUNTRY_CODES=
+
+#DWOLLA
+DWOLLA_KEY=
+DWOLLA_SECRET=
+DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
+DWOLLA_ENV=sandbox
+Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on the Appwrite, Plaid and Dwolla
+```
+
+Running the Project
+
+```ts:shell
+npm run dev
+```
+
+Open http://localhost:3000 in your browser to view the project.
+
+Thank you so much for reading {'<3'}.
