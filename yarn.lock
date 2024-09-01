@@ -10075,16 +10075,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-fast-marquee@npm:^1.6.4":
-  version: 1.6.4
-  resolution: "react-fast-marquee@npm:1.6.4"
-  peerDependencies:
-    react: ">= 16.8.0 || 18.0.0"
-    react-dom: ">= 16.8.0 || 18.0.0"
-  checksum: 30bb2c967b5162e7de130cccfcf51654ac1e29ecbf82116225a13958a05a79bc0ec11d72c49f172fa8c4d1f226b51cc93f9db5cb595c5a3529de8b41f60cbc2c
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -11693,7 +11683,6 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.5.11
     react: 18.3.1
     react-dom: 18.3.1
-    react-fast-marquee: ^1.6.4
     react-type-animation: ^3.2.0
     reading-time: 1.5.0
     rehype-autolink-headings: ^7.1.0
