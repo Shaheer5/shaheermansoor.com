@@ -28,7 +28,7 @@ const Header = () => {
           </Link>
         </div>
         {siteMetadata.openToWork && (
-          <OpenToWorkBadge classes={'absolute hidden sm:inline-block mt-20'} title={undefined} />
+          <OpenToWorkBadge classes={'absolute hidden sm:inline-block mt-20 z-10'} title={''} />
         )}
         <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
           {headerNavLinks

@@ -79,7 +79,7 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
-          <OpenToWorkBadge classes={'ml-12 mt-4'} />
+          <OpenToWorkBadge classes={'ml-12 mt-4'} title={''} />
         </nav>
       </div>
     </div>

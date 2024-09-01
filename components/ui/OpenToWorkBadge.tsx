@@ -15,7 +15,7 @@ export default function OpenToWorkBadge({ classes, title }) {
             </div>
           )}
           <span className="inline whitespace-nowrap text-[18px] md:text-sm">
-            {title ? 'Resume' : "I'm available for work"}
+            {title ? title : "I'm available for work"}
           </span>
         </div>
       </a>
