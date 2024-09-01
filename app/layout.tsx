@@ -82,7 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Marquee
           pauseOnHover
           autoFill
-          className="left-0 top-0 z-50 w-full bg-[#016527] py-1 text-white"
+          className="left-0 top-0 z-50 w-full bg-[#016527] py-1 text-xs text-white"
           style={{
             position: 'fixed',
           }}

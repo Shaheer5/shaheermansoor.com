@@ -10092,6 +10092,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-type-animation@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "react-type-animation@npm:3.2.0"
+  peerDependencies:
+    prop-types: ^15.5.4
+    react: ">= 15.0.0"
+    react-dom: ">= 15.0.0"
+  checksum: 4b7d92df71d8ed6cf53f182ce4ef9fb29636a86b14aa3852e5cbab11fd894e84bde12c6bb8e406258275ff2d0d875d0333dd67d91c9783d96bdefacb92c304cd
+  languageName: node
+  linkType: hard
+
 "react-virtual@npm:^2.8.2":
   version: 2.10.4
   resolution: "react-virtual@npm:2.10.4"
@@ -11683,6 +11694,7 @@ __metadata:
     react: 18.3.1
     react-dom: 18.3.1
     react-fast-marquee: ^1.6.4
+    react-type-animation: ^3.2.0
     reading-time: 1.5.0
     rehype-autolink-headings: ^7.1.0
     rehype-citation: ^2.0.0
