@@ -5,6 +5,7 @@ import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { genPageMetadata } from 'app/seo'
 import { usePathname } from 'next/navigation'
+import OpenToWorkBadge from '@/components/ui/OpenToWorkBadge'
 
 export const metadata = genPageMetadata({ title: 'About' })
 
@@ -25,8 +26,8 @@ export default function AuthorLayout({ children, content }: Props) {
             {path.includes('about') ? 'About' : 'Home'}
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center space-x-2 pt-8">
+        <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+          <div className="flex h-full flex-col items-center justify-center space-x-2 pt-6 md:pt-0">
             {avatar && (
               <Image
                 src={avatar}
@@ -39,6 +40,7 @@ export default function AuthorLayout({ children, content }: Props) {
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-center text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
+            <OpenToWorkBadge classes={'mt-4'} title={'Resume'} />
             <div className="flex space-x-3 pt-6">
               <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="github" href={github} />

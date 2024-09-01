@@ -17,7 +17,8 @@ export default function Home({ posts }) {
             Latest
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            <TypingAnimation data={siteMetadata.description} />
+            I am a full stack software engineer who loves ❤️‍🔥&nbsp;
+            <TypingAnimation />
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
