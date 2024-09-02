@@ -38,7 +38,7 @@ const projectsData: Project[] = [
     title: 'Apple Website Clone - iPhone 15 Pro',
     description: `1:1 Apple iPhone 15 Pro Webpage clone, powered by Three.JS, GSAP for smooth animations and all the design saved by Tailwind CSS...`,
     imgSrc: '/static/images/projects/apple-website-iphone15-live.png',
-    href: '/blog/apple-iphone15-clone/apple-iphone15-clone',
+    href: '/blog/apple-iphone15-clone',
   },
 ]
 
