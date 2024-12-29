@@ -127,19 +127,18 @@ export default function ListLayoutWithTags({
                 return (
                   <li key={path} className="border-b border-gray-200 py-5 dark:border-gray-700">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
-                      <div className="space-y-2 xl:flex">
+                      <div className="items-center space-y-2 xl:flex">
                         <dl>
                           <dt className="sr-only">Published on</dt>
                           <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                             <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                            <div className="py-2 pr-3">
-                              <Image
+                            <div className="pr-3">
+                              <img
                                 alt={title}
                                 src={images[0]}
-                                className="object-cover object-center"
+                                className="prose rounded-md object-cover object-center"
                                 width={215}
                                 height={150}
-                                style={{ maxWidth: '215px' }}
                               />
                             </div>
                           </dd>
@@ -155,9 +154,9 @@ export default function ListLayoutWithTags({
                               {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                             </div>
                           </div>
-                          <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                            {summary}
-                          </div>
+                          <p className="prose max-w-none text-gray-500 dark:text-gray-400">
+                            {summary?.slice(0, 120)}...
+                          </p>
                         </div>
                       </div>
                     </article>

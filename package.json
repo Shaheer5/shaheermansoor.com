@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "shaheer-mansoor-blog",
   "version": "2.2.0",
   "private": true,
   "scripts": {
@@ -72,5 +72,5 @@
       "prettier --write"
     ]
   },
-  "packageManager": "yarn@3.6.1"
+  "packageManager": "npm@10.8.1"
 }

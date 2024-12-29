@@ -123,7 +123,7 @@ export default function ListLayout({
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       <div className="py-2 pr-3">
-                        <Image
+                        <img
                           alt={title}
                           src={images[0]}
                           className="object-cover object-center"

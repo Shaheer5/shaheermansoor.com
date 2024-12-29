@@ -33,15 +33,13 @@ export default function Home({ posts }) {
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-semibold leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                        <div>
-                          <Image
-                            alt={title}
-                            src={images[0]}
-                            className="object-cover object-center"
-                            width={215}
-                            height={150}
-                          />
-                        </div>
+                        <img
+                          alt={title}
+                          src={images[0]}
+                          className="h-36 rounded-md object-cover object-center"
+                          width={215}
+                          height={150}
+                        />
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
@@ -61,9 +59,9 @@ export default function Home({ posts }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        <p className="prose max-w-none text-gray-500 dark:text-gray-400">
                           {summary}
-                        </div>
+                        </p>
                       </div>
                       <div className="text-base font-semibold leading-6">
                         <Link
