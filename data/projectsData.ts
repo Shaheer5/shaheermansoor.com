@@ -22,17 +22,23 @@ const projectsData: Project[] = [
   //   imgSrc: '/static/images/time-machine.jpg',
   //   href: '/blog/the-time-machine',
   // },
-  // {
-  //   title: 'Horizon Banking App - With Finance Management',
-  //   description: `Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users...`,
-  //   imgSrc: '/static/images/projects/horizon-banking-homepage.png',
-  //   href: '/blog/horizon-banking',
-  // },
   {
     title: 'YC Directory - Startup Ideas Platform',
     description: `A Next.js 15 platform where entrepreneurs can submit their startup ideas for virtual pitch competitions, browse other pitches, and gain exposure through a clean minimalistic design for a smooth user experience....`,
     imgSrc: '/static/images/projects/yc-directory-banner.png',
     href: '/blog/yc-directory',
+  },
+  {
+    title: 'Brainwave - Modern UI/UX website',
+    description: `Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard...`,
+    imgSrc: '/static/images/projects/brainwave-banner.png',
+    href: '/blog/brainwave',
+  },
+  {
+    title: 'Horizon Banking App - With Finance Management',
+    description: `Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users...`,
+    imgSrc: '/static/images/projects/horizon-banking-homepage.png',
+    href: '/blog/horizon-banking',
   },
   {
     title: 'ThreeJS Customizable Shirt',
