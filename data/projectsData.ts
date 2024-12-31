@@ -29,16 +29,22 @@ const projectsData: Project[] = [
     href: '/blog/yc-directory',
   },
   {
-    title: 'Brainwave - Modern UI/UX website',
-    description: `Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard...`,
-    imgSrc: '/static/images/projects/brainwave-banner.png',
-    href: '/blog/brainwave',
-  },
-  {
     title: 'Horizon Banking App - With Finance Management',
     description: `Built with Next.js, Horizon is a financial SaaS platform that connects to multiple bank accounts, displays transactions in real-time, allows users to transfer money to other platform users...`,
     imgSrc: '/static/images/projects/horizon-banking-homepage.png',
     href: '/blog/horizon-banking',
+  },
+  {
+    title: 'Zentry - Crafting The Real-life MMORPG Experience',
+    description: `Zentry pioneers the Metagame, a Game of Games ecosystem where worlds converge and communities connect, building the foundation for what will soon become the largest virtual economy—the 'Play Economy'—as the era of gaming culture rises...`,
+    imgSrc: '/static/images/projects/zentry-game-banner.png',
+    href: '/blog/zentry-game',
+  },
+  {
+    title: 'Brainwave - Modern UI/UX website',
+    description: `Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard...`,
+    imgSrc: '/static/images/projects/brainwave-banner.png',
+    href: '/blog/brainwave',
   },
   {
     title: 'ThreeJS Customizable Shirt',
