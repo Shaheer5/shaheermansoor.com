@@ -3,6 +3,13 @@
 import siteMetadata from '@/data/siteMetadata'
 import { useEffect, useState } from 'react'
 
+export const handleScrollTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+const handleScrollToComment = () => {
+  document.getElementById('comment')?.scrollIntoView({ behavior: 'smooth' })
+}
+
 const ScrollTopAndComment = () => {
   const [show, setShow] = useState(false)
 
@@ -16,12 +23,6 @@ const ScrollTopAndComment = () => {
     return () => window.removeEventListener('scroll', handleWindowScroll)
   }, [])
 
-  const handleScrollTop = () => {
-    window.scrollTo({ top: 0 })
-  }
-  const handleScrollToComment = () => {
-    document.getElementById('comment')?.scrollIntoView()
-  }
   return (
     <div className={`fixed bottom-8 right-8 z-10 flex flex-col gap-3`}>
       {siteMetadata.comments?.provider && (
