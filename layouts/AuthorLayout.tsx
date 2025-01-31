@@ -29,7 +29,7 @@ export default function AuthorLayout({ children, content }: Props) {
         <div className="items-center space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
           <div className="flex h-full flex-col items-center justify-center space-x-2 pt-6 xl:pt-0">
             {avatar && (
-              <img
+              <Image
                 src={avatar}
                 alt="avatar"
                 width={192}
@@ -40,7 +40,14 @@ export default function AuthorLayout({ children, content }: Props) {
             <h3 className="pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight">{name}</h3>
             <div className="text-center text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
-            {path.includes('about') ? <OpenToWorkBadge classes={'mt-4'} title={'Resume'} /> : ''}
+            {path.includes('about') ? (
+              <OpenToWorkBadge
+                classes={'mt-4 shadow-md dark:shadow-[#d6428d] rounded-full'}
+                title={'Resume'}
+              />
+            ) : (
+              ''
+            )}
             <div className="flex space-x-3 pt-6">
               <SocialIcon kind="mail" href={`mailto:${email}`} />
               <SocialIcon kind="github" href={github} />
