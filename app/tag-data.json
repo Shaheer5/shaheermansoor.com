@@ -1,7 +1,8 @@
 {
-  "react": 5,
-  "projects": 5,
-  "tailwind": 3,
+  "react": 6,
+  "projects": 6,
+  "gsap": 1,
+  "tailwind": 4,
   "next-js": 10,
   "typescript": 2,
   "guide": 10,
